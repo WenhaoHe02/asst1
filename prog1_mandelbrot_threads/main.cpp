@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <algorithm>
 #include <getopt.h>
-
+#include<ios>
 #include "CycleTimer.h"
 
 extern void mandelbrotSerial(
@@ -67,7 +67,7 @@ bool verifyResult (int *gold, int *result, int width, int height) {
 }
 
 int main(int argc, char** argv) {
-
+    std::ios::sync_with_stdio(false);
     const unsigned int width = 1600;
     const unsigned int height = 1200;
     const int maxIterations = 256;
